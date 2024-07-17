@@ -15,7 +15,7 @@ export class ProductDto extends TimeStamps{
   @IsString()
   description: string;
 
-  @IsString
+  @IsString()
   image: string;
 
   @IsArray()
