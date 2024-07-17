@@ -1,13 +1,13 @@
 import { Base, TimeStamps } from '@typegoose/typegoose/lib/defaultClasses';
 import { prop } from '@typegoose/typegoose';
 
-export interface ProductDto extends Base {}
-export class ProductDto extends TimeStamps{
+export interface ProductModel extends Base {}
+export class ProductModel extends TimeStamps{
 
-  @prop()
+  @prop({unique: true, required: true})
   title: string
 
-  @prop()
+  @prop({required: true, min: 0})
   price: number
 
   @prop()

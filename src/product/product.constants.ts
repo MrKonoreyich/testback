@@ -1,0 +1,1 @@
+export const PRODUCT_ALREADY_EXISTS_ERROR = 'Product already exists';
