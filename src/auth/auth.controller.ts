@@ -2,7 +2,8 @@ import { BadRequestException, Body, Controller, HttpCode, Post, UsePipes, Valida
 import { AuthService } from './auth.service';
 import { AuthDto } from './dto/auth.dto';
 import { ALREADY_REGISTERED_ERR } from './auth.constants';
-3
+
+
 @Controller('auth')
 export class AuthController {
   constructor(private readonly authService: AuthService) {}
