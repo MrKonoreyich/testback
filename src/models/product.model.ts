@@ -1,39 +1,33 @@
 import { Base, TimeStamps } from '@typegoose/typegoose/lib/defaultClasses';
 import { prop } from '@typegoose/typegoose';
-import { IsArray, IsNumber, IsString, ValidateNested } from 'class-validator';
-import { Type } from 'class-transformer';
 
 export interface ProductDto extends Base {}
 export class ProductDto extends TimeStamps{
 
-  @IsString()
+  @prop()
   title: string
 
-  @IsNumber()
+  @prop()
   price: number
 
-  @IsString()
+  @prop()
   description: string;
 
-  @IsString
+  @prop()
   image: string;
 
-  @IsArray()
-  @ValidateNested({each: true})
-  @Type(() => String)
+  @prop({type: () => [String]})
   categories: string[];
 
-  @IsArray()
-  @ValidateNested({each: true})
-  @Type(() => ProductCharacteristics)
+  @prop({type: () => [ProductCharacteristics], _id: false})
   characteristics: ProductCharacteristics[]
 }
 
 class ProductCharacteristics {
 
-  @IsString()
+  @prop()
   name: string;
 
-  @IsString()
+  @prop()
   value: string
 }
