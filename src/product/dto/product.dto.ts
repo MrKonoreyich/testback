@@ -20,7 +20,7 @@ export class ProductDto extends TimeStamps{
   image: string;
 
   @IsArray()
-  @ValidateNested({each: true})
+  @IsString({each: true})
   @Type(() => String)
   categories: string[];
 
@@ -61,9 +61,9 @@ export class updateDto {
 
   @IsOptional()
   @IsArray()
-  @ValidateNested({each: true})
+  @IsString({each: true})
   @Type(() => String)
-  categories?: string[];
+  categories: string[];
 
   @IsOptional()
   @IsArray()

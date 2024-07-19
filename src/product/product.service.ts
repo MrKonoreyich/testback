@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { InjectModel } from 'nestjs-typegoose';
+import { InjectModel } from '@m8a/nestjs-typegoose';
 import { ProductModel } from '../models/product.model';
 import { ModelType } from '@typegoose/typegoose/lib/types';
 import { ProductDto, updateDto } from './dto/product.dto';

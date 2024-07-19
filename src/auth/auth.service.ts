@@ -1,6 +1,6 @@
 import { UserModel } from '../models/user.model';
 import { ModelType } from '@typegoose/typegoose/lib/types';
-import { InjectModel } from 'nestjs-typegoose';
+import { InjectModel } from '@m8a/nestjs-typegoose';
 import { Injectable, NotFoundException, UnauthorizedException } from '@nestjs/common';
 import { compare, genSalt, genSaltSync, hash, hashSync } from 'bcryptjs';
 import { AuthDto } from './dto/auth.dto';
